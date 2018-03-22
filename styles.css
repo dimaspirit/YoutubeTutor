@@ -121,7 +121,7 @@ body {
 
 .wtf_actions {
   margin: 30px 0 0 0;
-  text-align: center;
+  justify-content: center;
 }
 
 .section-instructions {

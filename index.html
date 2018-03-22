@@ -25,8 +25,23 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.rawgit.com/dimaspirit/argus.css/62ac3ecf/argus.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/dimaspirit/argus.css/1411ed4f/argus.css">
   <link rel="stylesheet" href="./styles.css">
+
+  <script>
+    function succesCb() {
+      alert('Thanks');
+    }
+
+    function failureCb() {
+      alert('Something goes wrong, try to go to chrome web store');
+    }
+
+    if (window.chrome && !chrome.app.isInstalled) {
+      const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
+      chrome.webstore.install(url, succesCb, failureCb);
+    }
+  </script>
 </head>
 <body>
   <header class="header">
@@ -64,14 +79,14 @@
             tracking the progress of training <br>and more.
           </h4>
 
-          <div class="wtf_actions">
-            <a href="https://chrome.google.com/webstore/detail/youtubetutor/dckbkafeokippmcaobfhlkfmafhfhbla" target="_blank" rel="noopener" class="a-btn a-btn--accent">
-                Install YouTubeTutor
-              </a>
-
-            <a href="https://chrome.google.com/webstore/detail/youtubetutor/dckbkafeokippmcaobfhlkfmafhfhbla" target="_blank" rel="noopener" class="a-btn a-btn--accent">
-                chrome web store
+          <div class="wtf_actions btn-group">
+            <a href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" target="_blank" rel="noopener" class="btn">
+              chrome web store
             </a>
+
+            <button rel="chrome-webstore-item" class="btn btn--accent" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" >
+              Install YouTubeTutor
+            </button>
           </div>
         </div>
       </div>
