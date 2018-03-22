@@ -43,6 +43,8 @@
       if (window.chrome && !chrome.app.isInstalled) {
         const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
         chrome.webstore.install(url, succesCb, failureCb);
+      } else {
+        document.querySelector('.j-install').classList.add('btn--disabled');
       }
     }
   </script>
@@ -88,7 +90,7 @@
               chrome web store
             </a>
 
-            <button rel="chrome-webstore-item" class="btn btn--accent" onclick="install()" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" >
+            <button rel="chrome-webstore-item" class="btn btn--accent j-install" onclick="install()" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" >
               Install YouTubeTutor
             </button>
           </div>
