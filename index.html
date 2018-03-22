@@ -23,6 +23,8 @@
   <meta property="og:image" content="https://dimaspirit.github.io/YoutubeTutor/images/ogpreview.png">
   <meta name="twitter:card" content="summary_large_image">
 
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.rawgit.com/dimaspirit/argus.css/1411ed4f/argus.css">
@@ -37,9 +39,11 @@
       alert('Something goes wrong, try to go to chrome web store');
     }
 
-    if (window.chrome && !chrome.app.isInstalled) {
-      const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
-      chrome.webstore.install(url, succesCb, failureCb);
+    function install() {
+      if (window.chrome && !chrome.app.isInstalled) {
+        const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
+        chrome.webstore.install(url, succesCb, failureCb);
+      }
     }
   </script>
 </head>
@@ -84,7 +88,7 @@
               chrome web store
             </a>
 
-            <button rel="chrome-webstore-item" class="btn btn--accent" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" >
+            <button rel="chrome-webstore-item" class="btn btn--accent" onclick="install()" href="https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla" >
               Install YouTubeTutor
             </button>
           </div>
