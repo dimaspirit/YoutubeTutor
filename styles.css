@@ -1,8 +1,16 @@
-/* Mobile v. < 720px
- * Use: @media (min-width: 720px)
+/* Mobile v. < 780px
+ * Use: @media (min-width: 780px)
  * 
  * Brand color: 4f359b;
+ * Brand light: 5f47a4
  */
+:root {
+  --brand-color: #4f359b;
+  --brand-ligth-color: #5f47a4;
+
+  --gray-color: #888;
+}
+
 html {
   background: #fafafa;
   font: 400 10px 'Roboto', sans-serif;
@@ -11,6 +19,14 @@ html {
 body {
   margin: 0;
 }
+
+.btn--accent {
+  background-color: var(--brand-color);
+  border-color: var(--brand-ligth-color);
+}
+  .btn--accent:hover {
+    background-color: var(--brand-ligth-color);
+  }
 
 .logo {
   display: flex;
@@ -51,18 +67,17 @@ body {
   padding: 8px 0;
 }
 
-/* #A0A0A0 */
+
 .nav {
   display: flex;
   overflow: auto;
 }
-
 .nav_link {
   display: block;
   padding: 8px;
 
   font-size: 1.3rem;
-  color: #A0A0A0;
+  color: var(--gray-color);
   line-height: 24px;
   letter-spacing: .7px;
   white-space: nowrap;
@@ -78,6 +93,7 @@ body {
     color: #404040;
   }
 
+
 .section {
   padding: 56px 0;
 }
@@ -90,7 +106,13 @@ body {
     text-align: center;
   }
   .section-follow {
-    background: #4f359b;
+    background: var(--brand-color);
+  }
+  .section-instructions {
+    background: #131313;
+  }
+  .section-features {
+    background: #fff;
   }
 .section_cont {
   width: 86%;
@@ -99,26 +121,25 @@ body {
 }
 .section_title {
   font-size: 2.4rem;
-  color: #888;
+  color: var(--gray-color);
   font-weight: 500;
 }
 .section_content {
   margin: 30px 0 0 0;
 }
 
+
 .wtf_title {
   font-size: 3rem;
   color: rgb(17, 17, 17);
   font-weight: 300;
 }
-
 .wtf_description {
   margin: 20px 0 0 0;
   font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 400;
 }
-
 .wtf_actions {
   margin: 30px 0 0 0;
   justify-content: center;
@@ -127,20 +148,17 @@ body {
   font-size: 2.1rem;
   font-weight: 300;
 }
-
-.section-instructions {
-  background: #131313;
+@media (min-width: 780px) {
+  .wtf_title {
+    font-size: 6.2rem;
+  }
 }
 
 .follows {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 720px) {
-  .follows {
-    flex-direction: column;
-  }
-}
+
 .follow {
   display: block;
   min-width: 100px;
@@ -157,4 +175,33 @@ body {
 .follow_icon {
   display: block;
   margin: 0 auto 5px auto;
+}
+
+.features {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template: "fs" "ft" "fr" "fsy";
+}
+.feature.a-card {
+  background: #fafafa;
+  color: rgb(136, 136, 136);
+  line-height: 2rem;
+  font-weight: 300;
+}
+@media (min-width: 780px) {
+  .features {
+      grid-template: "fs fs" "fsy fr" "ft ft";
+  }
+}
+.feature-save {
+  grid-area: fs;
+}
+.feature-recommend {
+  grid-area: fr;
+}
+.feature-sync {
+  grid-area: fsy;
+}
+.feature-track {
+  grid-area: ft;
 }
