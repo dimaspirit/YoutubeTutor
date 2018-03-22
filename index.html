@@ -40,12 +40,18 @@
       alert('Something goes wrong, try to go to chrome web store');
     }
 
+    const isInstalled = chrome.app.isInstalled;
+
+    if(isInstalled) {
+      document.querySelector('.j-install').disabled = true;
+    }
+
     function install() {
       if (window.chrome && !chrome.app.isInstalled) {
         const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
         chrome.webstore.install(url, succesCb, failureCb);
       } else {
-        document.querySelector('.j-install').classList.add('btn--disabled');
+        document.querySelector('.j-install').disabled = true;
       }
     }
   </script>
