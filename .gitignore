@@ -1,19 +1,25 @@
-# OS or Editor folders
-._*
-.cache
-.DS_Store
-.idea
-.project
-.settings
-.tmproj
-*.esproj
+# macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# Sublime
 *.sublime-project
 *.sublime-workspace
-nbproject
-Thumbs.db
+
+# Web Storm
+.idea
+.idea_modules
 
 # Folders to ignore
 node_modules
 js/coverage
-.DS_Store
-.DS_Store
