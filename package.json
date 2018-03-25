@@ -1,0 +1,25 @@
+{
+  "name": "youtubetutor",
+  "version": "1.0.0",
+  "description": "It is the Chrome extension that extends Youtube functionality:  * add new opportunities for collecting playlists as courses;  * tracking the progress of training; * show the list of quality-tested and recommended courses by a large number of people.",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimaspirit/YoutubeTutor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimaspirit/YoutubeTutor/issues"
+  },
+  "homepage": "https://github.com/dimaspirit/YoutubeTutor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-htmlmin": "^4.0.0"
+  }
+}
