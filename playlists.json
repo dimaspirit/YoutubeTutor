@@ -4,6 +4,16 @@
       "id": "PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx",
       "categories": ["Programming"],
       "subcategories": ["Git", "Github"]
+    },
+    {
+      "id": "PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f",
+      "categories": ["Programming"],
+      "subcategories": ["GraphQL"]
+    },
+    {
+      "id": "PLLnpHn493BHFfs3Uj5tvx17mXk4B4ws4p",
+      "categories": ["Programming"],
+      "subcategories": ["ReactJS"]
     }
   ]
 }
