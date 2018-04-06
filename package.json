@@ -4,7 +4,7 @@
   "description": "It is the Chrome extension that extends Youtube functionality:  * add new opportunities for collecting playlists as courses;  * tracking the progress of training; * show the list of quality-tested and recommended courses by a large number of people.",
   "main": "index.js",
   "scripts": {
-    "build": "gulp",
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,10 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.3",
-    "gulp-htmlmin": "^4.0.0"
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-inject-partials": "^1.0.4",
+    "gulp-file-include": "^2.0.1"
   }
 }
