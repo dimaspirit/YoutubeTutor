@@ -1,0 +1,10 @@
+Desktop.ini
+.DS_Store
+
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+
+node_modules/
+npm-debug.log*
