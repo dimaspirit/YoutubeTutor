@@ -1,19 +1,8 @@
-# YoutubeTutor
-
-It is the Chrome extension that extends Youtube functionality: 
-* add new opportunities for collecting playlists as courses; 
-* tracking the progress of training;
-* show the list of quality-tested and recommended courses by a large number of people.
-
-Check out detailed information on [site](https://goo.gl/GXWfz1).
-Changelog can be found on [Product Hunt](https://www.producthunt.com/posts/youtubetutor);
+The `gh-pages` brach uses as an [official site](https://dimaspirit.github.io/YoutubeTutor/) of [YouTubeTutor Chrome extension](https://chrome.google.com/webstore/detail/youtubetutor/dckbkafeokippmcaobfhlkfmafhfhbla).
 
 ## Contribute
-There are a few ways contribute a playlist to recommended courses.
-
-1. You could create a pull-request with changes in playlist.json;
-2. Create an issue with a propose playlist;
-3. Make a comment with a link on the playlist on [Product Hunt](https://www.producthunt.com/posts/youtubetutor);
-
-Thanks for your time.
-
+ - Install Node.js;
+ - Install Gulp.js;
+ - Install [Livereload Chrome extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei);
+ - Run `npm install`;
+ - Run `npm start`;

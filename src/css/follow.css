@@ -1,0 +1,32 @@
+.section-follow {
+  background: var(--brand-color);
+}
+
+.follows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.follow {
+  display: block;
+  min-width: 100px;
+  margin: 0 0 25px 0;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  background: #fafafa;
+  color: rgba(17, 17, 17, 0.6);
+}
+  .follow:last-of-type {
+    margin-right: 0;
+  }
+
+.follow_icon {
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+@media (min-width: 780px) {
+
+}

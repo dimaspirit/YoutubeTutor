@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  overflow: auto;
+}
+
+.nav_link {
+  display: block;
+  padding: 8px;
+
+  font-size: 1.3rem;
+  line-height: 24px;
+  letter-spacing: .7px;
+  white-space: nowrap;
+  text-transform: none;
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  outline: none;
+}

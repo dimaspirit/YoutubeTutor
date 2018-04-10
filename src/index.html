@@ -32,59 +32,17 @@
   <link rel="stylesheet" href="./styles.css">
 
   <script>
-    function succesCb() {
-      alert('Thanks');
-    }
-
-    function failureCb(error) {
-      alert('Something goes wrong, try to go to chrome web store.', JSON.stringify(error));
-    }
-
-    const isInstalled = chrome.app.isInstalled;
-
-    if(isInstalled) {
-      document.querySelector('.j-install').disabled = true;
-    }
-
-    function install() {
-      if (window.chrome && !chrome.app.isInstalled) {
-        const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
-        chrome.webstore.install(url, succesCb, failureCb);
-      } else {
-        document.querySelector('.j-install').disabled = true;
-      }
-    }
+    if(new Date().getHours() >= 14) { document.documentElement.setAttribute('dark', true); }
   </script>
 </head>
 <body>
-  <header class="header">
-    <div class="header_logo">
-      <div class="logo">
-        <img class="logo_img" src="./images/logo.png" alt="Logo of YouTubeTutor">
-        <h1 class="logo_title">YouTubeTutor</h1>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <div class="nav_item">
-        <a href="#wtf" class="nav_link a-btn a-btn--link">What is it?</a>
-      </div>
-
-      <div class="nav_item">
-        <a href="#features" class="nav_link a-btn a-btn--link">Features</a>
-      </div>
-
-      <div class="nav_item">
-        <a href="#instructions" class="nav_link a-btn a-btn--link">How it work?</a>
-      </div>
-    </nav>
-  </header>
+  @@include('./html_partials/_header.html')
 
   <main class="main">
     @@include('./html_partials/_wtf.html')
     @@include('./html_partials/_follows.html')
-    @@include('./html_partials/_features.html')
-    @@include('./html_partials/_instructions.html')
+   <!--  @@include('./html_partials/_features.html')-->
+    @@include('./html_partials/_instructions.html') 
   </main>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -96,6 +54,6 @@
     gtag('config', 'UA-116383466-1');
   </script>
 
-  <script src="https://cdn.rawgit.com/corbindavenport/superembed.js/f2353c27/superembed.min.js"></script>
+<script src="https://cdn.rawgit.com/corbindavenport/superembed.js/f2353c27/superembed.min.js" ></script>
 </body>
 </html>
