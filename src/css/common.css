@@ -3,17 +3,25 @@
  * 
  */
 
- :root {
-  --brand-color: #4f359b;
-  --brand-ligth-color: #8c6ecc;
+/**
+ * *-dt means DARK-THEME
+ * All colors must be in RGBA notation
+ */
+:root {
+  --brand-color: rgba(79, 53, 155, 1); /* 4f359b */
+  --brand-color-action: rgba(79, 53, 155, 0.88);
+
+  --color-text: rgba(17, 17, 17, 0.6);
+  --color-text-dt: rgba(136, 136, 136, 1);
+
+  --color-header: rgba(17, 17, 17, 1);
+  --color-header-dt: rgba(255, 255, 255, 0.88);
 
   --color-link: rgba(17, 17, 17, 0.6);
   --color-link-action: rgba(17, 17, 17, 0.8);
 
-  --color-dark-theme: rgb(136, 136, 136);
-  --color-link-dark-theme-action: rgba(255, 255, 255, 0.74);
-
-  --gray-color: #888;
+  --color-link-dt: rgba(136, 136, 136, 1);
+  --color-link-action-dt: rgba(255, 255, 255, 0.74);
 }
 
 html {
@@ -26,11 +34,8 @@ html {
 
 body {
   font-size: 1.3rem;
-  color: #888;
+  color: var(--color-text);
 }
-  [dark] body {
-
-  }
 
 a {
   text-transform: none;
@@ -40,21 +45,31 @@ a {
     color: var(--color-link-action);
   }
   [dark] a {
-    color: var(--color-link-dark-theme);
+    color: var(--color-link-dt);
   }
   [dark] a:hover {
-    color: var(--color-link-dark-theme-action);
+    color: var(--color-link-action-dt);
+  }
+/** Rewrite argus.css */
+.btn--accent,
+[dark] .btn--accent {
+  border-color: var(--brand-color);
+  background: var(--brand-color);
+  color: #fff;
+}
+  .btn--accent:hover,
+  .btn--accent:active,
+  [dark] .btn--accent:hover {
+    border-color: var(--brand-color-action);
+    background: var(--brand-color-action);
+    color: #fff;
   }
 
 .section {
   padding: 56px 0;
 }
 
-.section-full {
-  min-height: 100vh;
-}
-
-.section_cont {
+.section_content {
   width: 86%;
   max-width: 1120px;
   margin: 0 auto;
@@ -62,13 +77,64 @@ a {
 
 .section_title {
   font-size: 2.4rem;
-  color: var(--gray-color);
+  color: var(--color-header);
   font-weight: 500;
 }
+  [dark] .section_title {
+    color: var(--color-header-dt);
+  }
 
-.section_content {
+.section_body {
   margin: 30px 0 0 0;
 }
+
+/** HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
+  padding: 8px 16px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  background: #fff;
+  box-shadow: 0px 0px 16px 0px rgba(52, 58, 64, 0.1);
+}
+  [dark] .header {
+    background: #232323;
+  }
+
+.header__logo {
+  min-width: 200px;
+  padding: 8px 0;
+}
+
+/** LOGO */
+.logo {
+  display: flex;
+}
+
+.logo_img {
+  height: 24px;
+}
+
+.logo_title {
+  margin: 0;
+  padding: 0 4px;
+
+  font: 500 26px/24px 'Roboto', sans-serif;
+  letter-spacing: -1.8px;
+  color: #282828;
+}
+  [dark] .logo_title {
+    color: #fff;
+  }
+
 
 /* .btn--accent {
   background-color: var(--brand-color);
