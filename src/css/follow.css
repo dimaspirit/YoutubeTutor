@@ -1,0 +1,42 @@
+.section-follow {
+  padding-bottom: 30px;
+  background: var(--brand-color);
+}
+
+.section-follow .section_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.follows {
+  display: block;
+  width: 50%;
+}
+
+.follow {
+  display: block;
+  width: 90%;
+  min-width: 100px;
+  max-width: 150px;
+  margin: 0 auto 26px auto;
+  padding: 12px;
+
+  background: #fafafa;
+  border-radius: 4px;
+  text-align: center;
+}
+  [dark] .follow:hover {
+    color: var(--color-link-action);
+  }
+
+.follow_icon {
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+@media (min-width: 780px) {
+  .section-follow .section_content {
+    flex-wrap: nowrap;
+  }
+}

@@ -6,7 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>YoutubeTutor extends Youtube to organize education</title>
-  <link rel="icon" href="./images/icon16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <meta name="theme-color" content="#4f359b">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,53 +38,11 @@
   <link rel="stylesheet" href="./styles.css">
 
   <script>
-    function succesCb() {
-      alert('Thanks');
-    }
-
-    function failureCb(error) {
-      alert('Something goes wrong, try to go to chrome web store.', JSON.stringify(error));
-    }
-
-    const isInstalled = chrome.app.isInstalled;
-
-    if(isInstalled) {
-      document.querySelector('.j-install').disabled = true;
-    }
-
-    function install() {
-      if (window.chrome && !chrome.app.isInstalled) {
-        const url = 'https://chrome.google.com/webstore/detail/dckbkafeokippmcaobfhlkfmafhfhbla';
-        chrome.webstore.install(url, succesCb, failureCb);
-      } else {
-        document.querySelector('.j-install').disabled = true;
-      }
-    }
+    if(new Date().getHours() >= 19)document.documentElement.setAttribute('dark', true);
   </script>
 </head>
 <body>
-  <header class="header">
-    <div class="header_logo">
-      <div class="logo">
-        <img class="logo_img" src="./images/logo.png" alt="Logo of YouTubeTutor">
-        <h1 class="logo_title">YouTubeTutor</h1>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <div class="nav_item">
-        <a href="#wtf" class="nav_link a-btn a-btn--link">What is it?</a>
-      </div>
-
-      <div class="nav_item">
-        <a href="#features" class="nav_link a-btn a-btn--link">Features</a>
-      </div>
-
-      <div class="nav_item">
-        <a href="#instructions" class="nav_link a-btn a-btn--link">How it work?</a>
-      </div>
-    </nav>
-  </header>
+  @@include('./html_partials/_header.html')
 
   <main class="main">
     @@include('./html_partials/_wtf.html')
@@ -95,7 +59,5 @@
     gtag('js', new Date());
     gtag('config', 'UA-116383466-1');
   </script>
-
-  <script src="https://cdn.rawgit.com/corbindavenport/superembed.js/f2353c27/superembed.min.js"></script>
 </body>
 </html>

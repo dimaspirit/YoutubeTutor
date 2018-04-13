@@ -1,0 +1,63 @@
+.section-wtf {
+  min-height: 100vh;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.wtf_title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-header); 
+}
+  [dark] .wtf_title {
+    color: var(--color-header-dt); 
+  }
+
+.wtf_description {
+  margin: 20px 0 0 0;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+  [dark] .wtf_description {
+    color: var(--color-text-dt);
+  }
+
+.wtf_actions {
+  margin: 30px 0 0 0;
+}
+
+.wtf_actions .btn {
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (min-width: 780px) {
+  .wtf_title {
+    font-size: 6.2rem;
+  }
+
+  .wtf_description {
+    font-size: 1.8rem;
+  }
+
+  .wtf_actions .btn {
+    font-size: 1.8rem;
+  }
+}
+
+/* 
+
+  [dark] .wtf_title {
+    color: #fff;
+  }
+
+
+
+
+
+ */
