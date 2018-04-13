@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="./styles.css">
 
   <script>
-    if(new Date().getHours() >= 18)document.documentElement.setAttribute('dark', true);
+    if(new Date().getHours() >= 19)document.documentElement.setAttribute('dark', true);
   </script>
 </head>
 <body>
@@ -47,8 +47,8 @@
   <main class="main">
     @@include('./html_partials/_wtf.html')
     @@include('./html_partials/_follows.html')
-   <!-- @@include('./html_partials/_features.html')
-    @@include('./html_partials/_instructions.html') -->
+    @@include('./html_partials/_features.html')
+    @@include('./html_partials/_instructions.html')
   </main>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -59,7 +59,5 @@
     gtag('js', new Date());
     gtag('config', 'UA-116383466-1');
   </script>
-
-<script src="https://cdn.rawgit.com/corbindavenport/superembed.js/f2353c27/superembed.min.js" ></script>
 </body>
 </html>

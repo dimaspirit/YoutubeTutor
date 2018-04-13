@@ -1,0 +1,29 @@
+.features {
+  display: grid;
+  grid-gap: 2.5rem;
+}
+
+.feature {
+  background: var(--color-bg-spec);
+}
+
+.feature .a-card__header {
+  font-weight: 500;
+  color: var(--color-header);
+}
+
+@media (min-width: 780px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature:nth-child(3n+1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.feature.a-card {
+  line-height: 2rem;
+  font-weight: 300;
+}

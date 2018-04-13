@@ -22,10 +22,12 @@
 
   --color-link-dt: rgba(136, 136, 136, 1);
   --color-link-action-dt: rgba(255, 255, 255, 0.74);
+
+  --color-bg-spec: #fafafa;
 }
 
 html {
-  background: #fafafa;
+  background: var(--color-bg-spec);
   font: 400 10px 'Roboto', sans-serif;
 }
   html[dark] {
@@ -135,62 +137,25 @@ a {
     color: #fff;
   }
 
-
-/* .btn--accent {
-  background-color: var(--brand-color);
-  border-color: var(--brand-ligth-color);
+/** NAV */
+.nav {
+  display: flex;
+  overflow: auto;
 }
-  .btn--accent:hover {
-    background-color: var(--brand-ligth-color);
-  } */
 
-/*  */
+.nav_link {
+  display: block;
+  padding: 8px;
 
-/* 
+  font-size: 1.3rem;
+  line-height: 24px;
+  letter-spacing: .7px;
+  white-space: nowrap;
+  text-transform: none;
+  text-decoration: none;
 
+  cursor: pointer;
+  user-select: none;
 
-/* 
-
-
-  
-
-  .section-features {
-    background: #fff;
-  }
-
-
-
-
-
-
-
-
-
-.features {
-  display: grid;
-  grid-gap: 2.5rem;
-  grid-template: "fs" "ft" "fr" "fsy";
+  outline: none;
 }
-.feature.a-card {
-  background: #fafafa;
-  color: rgb(136, 136, 136);
-  line-height: 2rem;
-  font-weight: 300;
-}
-@media (min-width: 780px) {
-  .features {
-      grid-template: "fs fs" "fsy fr" "ft ft";
-  }
-}
-.feature-save {
-  grid-area: fs;
-}
-.feature-recommend {
-  grid-area: fr;
-}
-.feature-sync {
-  grid-area: fsy;
-}
-.feature-track {
-  grid-area: ft;
-} */
