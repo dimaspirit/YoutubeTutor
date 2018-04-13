@@ -38,7 +38,8 @@
   <link rel="stylesheet" href="./styles.css">
 
   <script>
-    if(new Date().getHours() >= 19)document.documentElement.setAttribute('dark', true);
+    const hours = new Date().getHours();
+    if(hours < 7 || hours >= 19)document.documentElement.setAttribute('dark', true);
   </script>
 </head>
 <body>
