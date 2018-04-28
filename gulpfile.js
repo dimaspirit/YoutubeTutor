@@ -13,7 +13,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('injectHtml', function () {
-  return gulp.src('./src/index.html')
+  return gulp.src('./src/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -32,7 +32,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./src/index.html', './src/html_partials/*.html'], ['injectHtml']);
+  gulp.watch(['./src/*.html', './src/html_partials/*.html'], ['injectHtml']);
   gulp.watch('./src/css/*.css', ['styles']);
 });
 
