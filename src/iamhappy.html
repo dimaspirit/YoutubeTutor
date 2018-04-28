@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Iam happy</title>
+  @@include('./html_partials/_head.html', {
+    "title": "I am so happy | YoutubeTutor extends Youtube to organize education"
+  })
 </head>
 <body>
-  <h1>I am happy</h1>
-  <h2>It's test</h2>
+  <div class="emotion">
+    <main class="emotion_main">
+      <h1 class="emotion_title">I am glad to see you</h1>
+      <p>
+        <a class="link" href="./index.html#features" target="_blank">
+          Click to check out how YoutubeTutor can help you
+        </a>
+      </p>
+
+      <div class="emotion_share">
+        <p>Help us to tell the world about YoutubeTutor</p>
+        <div class="emotion_share__body">
+          <div class="twitter emotion_share__item">
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="YouTubeTutor makes YouTube better, check out " data-url="https://goo.gl/GXWfz1" data-hashtags="YouTubeTutor,YouTubeEDU" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <div class="facebook emotion_share__item">
+              <div class="fb-share-button" data-href="https://dimaspirit.github.io/YoutubeTutor/" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdimaspirit.github.io%2FYoutubeTutor%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
+
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.12&appId=1102291716559858&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+          </div>
+
+          <div class="linkedin emotion_share__item">
+              <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+              <script type="IN/Share" data-url="https://dimaspirit.github.io/YoutubeTutor/"></script>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <aside class="emotion_illustration">
+      <img class="emotion_illustration_img" src="https://icongr.am/material/emoticon-happy.svg?size=10&color=4f359b" alt="Happy face">
+    </aside>
+  </div>
 </body>
 </html>

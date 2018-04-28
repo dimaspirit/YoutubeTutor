@@ -23,15 +23,16 @@
   --color-link-dt: rgba(136, 136, 136, 1);
   --color-link-action-dt: rgba(255, 255, 255, 0.74);
 
-  --color-bg-spec: #fafafa;
+  --color-bg: #fafafa;
+  --color-bg-dt: #131313;
 }
 
 html {
-  background: var(--color-bg-spec);
+  background: var(--color-bg);
   font: 400 10px 'Roboto', sans-serif;
 }
   html[dark] {
-    background: #131313;
+    background: var(--color-bg-dt);
   }
 
 body {

@@ -4,7 +4,7 @@
 }
 
 .feature {
-  background: var(--color-bg-spec);
+  background: var(--color-bg);
 }
 
 .feature .a-card__header {
