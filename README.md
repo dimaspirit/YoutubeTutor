@@ -7,6 +7,7 @@ It is the Chrome extension that extends Youtube functionality:
 
 Check out detailed information on [site](https://goo.gl/GXWfz1).
 Changelog can be found on [Product Hunt](https://www.producthunt.com/posts/youtubetutor);
+The source code is available https://github.com/dimaspirit/smartYoutube
 
 ## Contribute
 There are a few ways contribute a playlist to recommended courses.
