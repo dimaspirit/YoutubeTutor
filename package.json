@@ -1,0 +1,35 @@
+{
+  "name": "youtubetutor",
+  "version": "5.0.0",
+  "description": "The best way to organize education by tutorials from Youtube",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimaspirit/smartYoutube.git"
+  },
+  "keywords": [
+    "youtubetutor",
+    "chrome",
+    "extensions"
+  ],
+  "author": "Dima Lobanov <dspwww@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/dimaspirit/smartYoutube/issues"
+  },
+  "homepage": "https://github.com/dimaspirit/smartYoutube#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "dotenv-webpack": "^1.7.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
+  }
+}

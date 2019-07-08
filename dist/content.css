@@ -1,0 +1,262 @@
+/**
+ * BRAND COLOR: 4f359b
+ *
+ * [ytt-*__*-*]
+ */
+
+.ytt-link {
+  display: inline-block;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+
+  color: rgba(17, 17, 17, 0.6);
+  text-decoration: none;
+  
+  border: none;
+  cursor: pointer;
+}
+  .ytt-link:hover {
+    color: rgba(17, 17, 17, 0.8);
+  }
+  html[dark] .ytt-link {
+    color: rgb(136, 136, 136);
+  }
+  html[dark] .ytt-link:hover {
+    color: rgba(255, 255, 255, .74);
+  }
+
+.ytt-empty_state {
+  margin: 0 0 24px 0;
+  min-height: 100px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: #888;
+}
+  .ytt-empty_state p {
+    margin: 0;
+  }
+  .ytt-empty_state__title {
+    margin: 0 0 18px 0;
+
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #111;
+  }
+  html[dark] .ytt-empty_state__title {
+    color: #fff;
+  }
+
+
+.ytt-lesson {
+  margin: 0 0 24px 0;
+}
+
+/** HOME */
+.ytt-home {
+  display: block;
+  width: 428px;
+  margin: 0 auto;
+
+  font-size: 13px;
+}
+  @media (min-width: 662px) {
+    .ytt-home {
+      width: 642px;
+    }
+  }
+  @media (min-width: 876px) {
+    .ytt-home {
+      width: 856px;
+    }
+  }
+  @media (min-width: 1090px) {
+    .ytt-home {
+      width: 1070px;
+    }
+  }
+  @media (min-width: 1276px) {
+    .ytt-home {
+      width: 856px;
+    }
+
+    .ytd-browse[persistent-guide] .ytt-home {
+      width: 856px;
+    }
+  }
+  @media (min-width: 1304px) {
+    .ytt-home {
+      width: 1284px;
+    }
+
+    .ytd-browse[persistent-guide] .ytt-home {
+      width: 856px;
+    }
+  }
+  @media (min-width: 1390px) {
+    .ytt-home {
+      width: 1070px;
+    }
+
+    .ytd-browse[persistent-guide] .ytt-home {
+      width: 856px;
+    }
+  }
+  @media (min-width: 1640px) {
+    .ytt-home {
+      width: 1284px;
+    }
+  }
+
+.ytt-home__section {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+  html[dark] .ytt-home__section {
+    border-bottom-color: #242424;
+  }
+
+.ytt-home__header {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 24px 0 0 0;
+}
+
+.ytt-home__title {
+  margin: 0;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+
+  color: #111;
+}
+  html[dark] .ytt-home__title {
+    color: #fff;
+  }
+
+.ytt-home__annotation {
+  margin-left: 8px;
+  max-height: 1.8rem;
+
+  color: #888;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  text-transform: none;
+}
+
+.ytt-home__action {
+  padding: 0 0 0 40px;
+  white-space: nowrap;
+  line-height: 2rem;
+}
+
+.ytt-home__content {
+  display: flex;
+  margin: 24px 0 0 0;
+}
+
+.ytt-course_preview {
+  /* display: flex; */
+  width: 210px;
+  margin: 0 4px 24px 0;
+
+  overflow: hidden;
+
+  color: #888;
+}
+
+.ytt-course_preview__db {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 4px;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(17, 17, 17, .67);
+  background-image: url(https://icongr.am/material/cloud-off-outline.svg?color=ffffff&size=20);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 99;
+
+  cursor: pointer;
+}
+  .ytt-course_preview__db-sync {
+    background-image: url(https://icongr.am/material/cloud.svg?color=ffffff&size=20);
+  }
+
+.ytt-course_preview__thumbnail {
+  position: relative;
+  width: 210px;
+  height: 118px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+.ytt-course_preview__thumbnai--standart {
+  background-position-y: -20px;
+}
+
+.ytt-course_preview__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ytt-course_preview__title {
+  display: block;
+  margin: 8px 0 8px;
+  
+  font-size: 1.4rem;
+  color: rgb(17, 17, 17);
+  font-weight: 500;
+  text-decoration: none;
+}
+  html[dark] .ytt-course_preview__title {
+    color: #fff;
+  }
+
+.course_preview_actions {
+  margin: 8px 0 0 0;
+}
+
+.ytt-course {
+  font-size: 13px;
+}
+
+.ytt-button {
+  padding: 10px 16px;
+  margin: auto 4px;
+
+  white-space: nowrap;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: .007px;
+  text-transform: uppercase;
+  color: #fff;
+
+  background: #4F359B;
+  border: 1px solid #4F359B;
+  border-radius: 2px;
+  outline-width: 0;
+
+  cursor: pointer;
+}
+
+.ytt-action_playlist_lesson .ytt-button {
+  margin: 5px 5px 5px 0;
+}

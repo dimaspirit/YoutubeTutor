@@ -1,0 +1,67 @@
+html {
+  background: #fafafa;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 8px 16px;
+  background: #fff;
+
+  text-align: center;
+}
+
+.logo {
+  height: 24px;
+}
+
+.logo__image {
+  max-height: 100%;
+}
+
+.main {
+  padding: 10px 0;
+}
+
+/* section */
+
+.section__inner {
+  padding: 0 32px;
+}
+
+.follows {
+  display: flex;
+  justify-content: center;
+}
+
+.follow {
+  display: block;
+  min-width: 100px;
+  margin: 0 30px 0 0;
+  padding: 12px;
+  
+  border-radius: 4px;
+  background: #fafafa;
+
+  text-align: center;
+  text-decoration: none;
+  color: rgba(17, 17, 17, 0.6);
+
+  cursor: pointer;
+  outline: none;
+}
+.follow:hover {
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.follow_icon {
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+.footer {
+  text-align: center;
+}
+
