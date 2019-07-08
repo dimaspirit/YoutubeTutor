@@ -1,4 +1,4 @@
-# smartYoutube
+# YoutubeTutor
 
 ## Roadmap
  - Generate new API keys and move them to .env file;
