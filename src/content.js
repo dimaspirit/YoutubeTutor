@@ -32,11 +32,11 @@ class Client {
         chrome.runtime.onMessage.addListener(this.onMessage.bind(this));
 
         this.activeCourses = new CourseListActive();
-        this.recommendedCourses = new CourseListRecommended();
+        // this.recommendedCourses = new CourseListRecommended();
         
         const loadInit = [];
         loadInit.push(this.activeCourses.fetch());
-        loadInit.push(this.recommendedCourses.fetch());
+        // loadInit.push(this.recommendedCourses.fetch());
     
         Promise.all(loadInit)
           .then(() => {
@@ -58,7 +58,7 @@ class Client {
     
     if(route.pathname === PAGES.home) {
       const activeCourse = this.activeCourses.getData();
-      const recommendedCourses = this.recommendedCourses.getData();
+      // const recommendedCourses = this.recommendedCourses.getData();
 
       // function handleSync(id) {
       //   self.activeCourses.makeSync(id)
@@ -70,7 +70,7 @@ class Client {
       //     })
       // }
  
-      Home.render(recommendedCourses, activeCourse, {
+      Home.render([], activeCourse, {
         switchoff: function() {
           chrome.storage.local.set({'yttDisabled': Date.now()}, function() {
             location.reload();

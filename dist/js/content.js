@@ -934,11 +934,11 @@ function () {
       if (_this.user.isEnabled) {
         // Set lister for messaging with backbground.js
         chrome.runtime.onMessage.addListener(_this.onMessage.bind(_this));
-        _this.activeCourses = new _CourseList_CourseListActive__WEBPACK_IMPORTED_MODULE_2__["default"]();
-        _this.recommendedCourses = new _CourseList_CourseListRecommended__WEBPACK_IMPORTED_MODULE_3__["default"]();
+        _this.activeCourses = new _CourseList_CourseListActive__WEBPACK_IMPORTED_MODULE_2__["default"](); // this.recommendedCourses = new CourseListRecommended();
+
         var loadInit = [];
-        loadInit.push(_this.activeCourses.fetch());
-        loadInit.push(_this.recommendedCourses.fetch());
+        loadInit.push(_this.activeCourses.fetch()); // loadInit.push(this.recommendedCourses.fetch());
+
         Promise.all(loadInit).then(function () {
           _this.route();
         })["catch"](function (error) {
@@ -962,8 +962,8 @@ function () {
       var route = Object(_RouteHelper__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
       if (route.pathname === _config__WEBPACK_IMPORTED_MODULE_0__["PAGES"].home) {
-        var activeCourse = this.activeCourses.getData();
-        var recommendedCourses = this.recommendedCourses.getData(); // function handleSync(id) {
+        var activeCourse = this.activeCourses.getData(); // const recommendedCourses = this.recommendedCourses.getData();
+        // function handleSync(id) {
         //   self.activeCourses.makeSync(id)
         //     .then(() => {
         //       self.route();
@@ -973,7 +973,7 @@ function () {
         //     })
         // }
 
-        _views_layots_Home__WEBPACK_IMPORTED_MODULE_4__["default"].render(recommendedCourses, activeCourse, {
+        _views_layots_Home__WEBPACK_IMPORTED_MODULE_4__["default"].render([], activeCourse, {
           switchoff: function switchoff() {
             chrome.storage.local.set({
               'yttDisabled': Date.now()
@@ -1304,11 +1304,11 @@ var Home = {
         className: self.ui.btnSwitchOff,
         content: 'Want just serf on YouTube?'
       }
-    }, activeCourses);
-    elDOM += _components_CoursePreviewList__WEBPACK_IMPORTED_MODULE_1__["default"].compose({
-      title: 'Recommended courses',
-      annotation: 'List of quality-tested and recommended courses by a large number of users'
-    }, recommendedCourses);
+    }, activeCourses); // elDOM += CoursePreviewList.compose({
+    //   title: 'Recommended courses',
+    //   annotation: 'List of quality-tested and recommended courses by a large number of users'
+    // }, recommendedCourses);
+
     elDOM += "\n      </div>";
     return elDOM;
   }

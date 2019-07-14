@@ -59,10 +59,10 @@ const Home = {
       }
     }, activeCourses);
 
-    elDOM += CoursePreviewList.compose({
-      title: 'Recommended courses',
-      annotation: 'List of quality-tested and recommended courses by a large number of users'
-    }, recommendedCourses);
+    // elDOM += CoursePreviewList.compose({
+    //   title: 'Recommended courses',
+    //   annotation: 'List of quality-tested and recommended courses by a large number of users'
+    // }, recommendedCourses);
 
     elDOM += `
       </div>`;
