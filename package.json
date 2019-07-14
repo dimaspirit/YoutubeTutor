@@ -1,6 +1,6 @@
 {
   "name": "youtubetutor",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "The best way to organize education by tutorials from Youtube",
   "main": "index.js",
   "scripts": {
